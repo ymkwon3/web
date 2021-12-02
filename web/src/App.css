@@ -1,0 +1,19 @@
+body {
+  background-color: rgb(12, 12, 12);
+  font-size: 10px;
+}
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(204, 204, 204);
+  height: 100vh;
+}
+
+.App-header {
+  font-size: 2.4rem;
+  font-weight: bold;
+  height: 80vh;
+  width: 100rem;
+  border: 1px solid white;
+}
