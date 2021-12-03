@@ -29,7 +29,7 @@ body {
   font-size: 1.6rem;
   font-weight: bold;
   white-space: pre-line;
-  width: 21rem;
+  width: 22rem;
   user-select: none;
 }
 
@@ -41,14 +41,19 @@ body {
 .App-project {
   background-color: #fffaf2;
   color: black;
+  padding: 5rem 0;
 }
 
+.App-footer {
+  background-color: #1e1e1e;
+}
 .subTitle {
   position: relative;
   color: black;
   font-size: 1.8rem;
   user-select: none;
   margin: 2rem 0;
+  opacity: 0;
 }
 
 .content {
@@ -64,7 +69,7 @@ body {
   width: 0.3rem;
   margin: 0 4rem;
   background-color: black;
-  opacity: 0.8;
+  opacity: 0;
 }
 
 .flex-column {
@@ -79,4 +84,24 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+
+.animated.slide-in-left {
+    animation: slideInLeft 1.25s ease both;
+}
+
+.waypoint {
+  opacity: 0;
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-300px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
