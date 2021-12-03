@@ -29,8 +29,7 @@ body {
   font-size: 1.6rem;
   font-weight: bold;
   white-space: pre-line;
-  height: 8vh;
-  width: 24vw;
+  width: 21rem;
   user-select: none;
 }
 
@@ -49,13 +48,13 @@ body {
   color: black;
   font-size: 1.8rem;
   user-select: none;
+  margin: 2rem 0;
 }
 
 .content {
   font-size: 1.2rem;
   font-weight: bold;
   color: black;
-  width: 40vw;
   opacity: 0.8;
 }
 
