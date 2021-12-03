@@ -15,10 +15,11 @@ function App(props) {
             <div className="subTitle">
                 프로젝트
             </div>
+            <div className="row-line"/>
             <div className="project-box flex-row" onClick={() => handleCardClick(0)} ref={(e) => cardRef.current[0] = e}>
                 <div className="project-card project-card-front flex-row" style={{ justifyContent: "space-around" }}>
                     <div className="project-title">
-                        Project Name
+                        포트폴리오 웹사이트
                     </div>
                     <img src="https://t1.daumcdn.net/cfile/tistory/24283C3858F778CA2E" alt="" />
                 </div>
@@ -40,9 +41,9 @@ function App(props) {
             <div className="project-box flex-row" onClick={() => handleCardClick(1)} ref={(e) => cardRef.current[1] = e}>
                 <div className="project-card project-card-front flex-row" style={{ justifyContent: "space-around" }}>
                     <div className="project-title">
-                        Project Name2
+                        포트폴리오 웹사이트
                     </div>
-                    <img src="https://t1.daumcdn.net/cfile/tistory/24283C3858F778CA2E" alt="" />
+                    <img src="images/web.jpg" alt="" />
                 </div>
                 <div className="project-card project-card-back flex-column">
                     <div className="flex-column">
