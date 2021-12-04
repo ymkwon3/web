@@ -36,6 +36,15 @@
 .project-title {
     font-size: 1.6rem;
     font-weight: bold;
-    text-decoration: underline;
-    text-underline-position: under;
+    font-family: 'Black Han Sans';
+}
+
+.project-date {
+    font-size: 1.0rem;
+    color: #505050;
+    margin: 1rem 0;
+}
+
+.content-detail {
+    
 }

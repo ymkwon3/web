@@ -11,37 +11,3 @@
 .footer-update {
     font-size: 1.2rem;
 }
-
-.svg-div {
-    width: 2.8rem;
-    margin: 0;
-    padding: 0;
-    user-select: none;
-}
-
-.svg-size {
-    width: 100%;
-    height: 100%;
-}
-
-.sub-heading {
-    font-size: 1.4rem;
-    font-weight: bold;
-}
-
-.sub-content {
-    font-size: 1.0rem; 
-}
-
-.icon-name-section {
-    width: 22rem;
-    justify-content: flex-start!important;
-    margin: 2rem 0;
-    transition-duration: 0.5s;
-    cursor:default;
-}
-
-.icon-name-section > div {
-    margin: 0 0.5rem;
-    transition-duration: 0.5s;
-}

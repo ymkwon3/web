@@ -1,15 +1,30 @@
 * {
   box-sizing: content-box;
+  font-family: 'Spoqa Han Sans', sans-serif;
 }
 
 html::-webkit-scrollbar{
   display: none;
-  font-family: 'Spoqa Han Sans', sans-serif;;
+  
 }
 
 body {
   background-color: rgb(12, 12, 12);
   font-size: 10px;
+}
+
+a {
+  color: blueviolet;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+a:hover {
+  transform: scale(1.02);
+}
+
+.img-shadow {
+  box-shadow: 0.1rem 0.1rem 0.25rem #404040;
 }
 
 .App {
@@ -91,6 +106,40 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+
+.svg-div {
+  width: 2.4rem;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+.svg-size {
+  width: 2rem;
+  height: 2rem;
+}
+
+.sub-heading {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.sub-content {
+  font-size: 1.0rem; 
+}
+
+.icon-name-section {
+  width: 22rem;
+  justify-content: flex-start!important;
+  margin: 2rem 0;
+  transition-duration: 0.5s;
+  cursor:default;
+}
+
+.icon-name-section > div {
+  margin: 0 0.5rem;
+  transition-duration: 0.5s;
 }
 
 .animated.slide-in-left {
