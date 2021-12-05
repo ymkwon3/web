@@ -37,6 +37,8 @@
     font-size: 1.6rem;
     font-weight: bold;
     font-family: 'Black Han Sans';
+    text-align: center;
+    word-break: keep-all;
 }
 
 .project-date {
@@ -45,6 +47,28 @@
     margin: 1rem 0;
 }
 
-.content-detail {
-    
+@media screen and (max-width:92rem) {
+    .project-box {
+        height: 20rem;
+        width: 40rem;
+        margin: 1rem auto;
+        position: relative;
+        transform: rotateY(0deg);
+        transition: 0.5s;
+        transform-style: preserve-3d;
+        box-shadow: 0.2rem 0.2rem 0.5rem #505050;
+        cursor: pointer;
+    }
+
+    .project-card-front > img {
+        width: 30rem;
+    }
+
+    .project-title {
+        font-size: 1.2rem;
+    }
+
+    .project-date {
+        font-size: 0.6rem;
+    }
 }
