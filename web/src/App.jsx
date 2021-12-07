@@ -77,11 +77,11 @@ function App() {
             </div>
           </div>
           <div className="App-aboutMe flex-row">
-            <div className="subTitle" ref={(e) => slideRef.current[0] = e} style={{opacity : 0}}>
+            <div className="subTitle" ref={(e) => slideRef.current[0] = e} style={{ opacity: 0 }}>
               소개
             </div>
             <div className="column-line" ref={(e) => slideRef.current[1] = e} />
-            <div className="content flex-column" ref={(e) => slideRef.current[2] = e} style={{opacity : 0}}>
+            <div className="content flex-column" ref={(e) => slideRef.current[2] = e} style={{ opacity: 0 }}>
               좋은 개발자를 꿈꾸며 배우고 있는 권영민입니다.
               <br />
               좋은 기회로 외주를 경험하였고, 이를 통해 개발에 대한 흥미와
@@ -89,7 +89,7 @@ function App() {
               문제 해결에 대한 흥미를 느껴 좋은 개발자라는 꿈을 가지게 되었습니다.
               <br />
               <br />
-              "1일 1커밋"이라는 목표를 설정해 
+              "1일 1커밋"이라는 목표를 설정해
               <br />
               알고리즘 문제 해결, 개발을 통해 꾸준히 달성하고 있습니다.
             </div>
