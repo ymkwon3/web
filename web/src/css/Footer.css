@@ -1,6 +1,12 @@
 .footer {
     height: 60vh;
+    width: 90vw;
     justify-content: space-around;
+}
+
+.footer >:nth-child(2) {
+    width: 80%;
+    flex-wrap: wrap;
 }
 
 .footer-title {
@@ -10,4 +16,17 @@
 
 .footer-update {
     font-size: 1.2rem;
+}
+
+@media screen and (orientation:portrait) {
+    .footer {
+        padding-top: 2.0rem;
+    }
+    .footer-title {
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+    .footer-update {
+        font-size: 1.0rem;
+    }
 }
