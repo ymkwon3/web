@@ -1,8 +1,8 @@
 let maria = require('mysql');
 let conn = maria.createConnection({
-    host : 'localhost',
+    host : '175.215.49.230',
     user : 'root',
-    password : '1q2w3e$R',
+    password : '1q2w3e4r',
     database : 'portfolio'
 });
 
