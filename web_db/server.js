@@ -19,6 +19,9 @@ server.get('/board',(req, res) => {
     });
 });
 
-server.listen(3001, function(){
+const host = "175.215.49.230";
+const port = 3001;
+
+server.listen(port, host, function(){
     console.log("server listening on port 3001");
 });
