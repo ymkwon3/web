@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route, Link } from 'react-router-dom';
 import ReactDOM from 'react-dom';
 
 import './css/App.css';
@@ -15,10 +15,9 @@ function App() {
   const menuRef = useRef();
   const handleToggle = () => {
     setActive(!isMenuActive);
-    menuRef.current.style.width = isMenuActive ? "10rem" : "0";
+    menuRef.current.style.width = isMenuActive ? "15vw" : "0";
     console.log(menuRef.current.style)
   };
-
   return (
     <>
       <div className="App">
@@ -27,17 +26,18 @@ function App() {
           <div className={`menu-bar2 ${isMenuActive ? "" : "menu-change"}`}></div>
           <div className={`menu-bar3 ${isMenuActive ? "" : "menu-change"}`}></div>
         </div>
-        <div className="menu" ref={menuRef}>
-          <div>메뉴1</div>
-          <div>메뉴2</div>
-          <div>메뉴3</div>
+        <div className="menu flex-column" ref={menuRef}>
+          <div>방명록</div>
+          <div>이메일</div>
         </div>
-        <BrowserRouter>
+        <HashRouter>
+          <Link to="/board">링ㅋ므</Link>
           <Routes>
+            
             <Route path="/" element={<MainPage/>}/>
             <Route path="/board" element={<Board/>}/>
           </Routes>
-        </BrowserRouter>
+        </HashRouter>
           <div className="App-footer">
             <Footer />
           </div>

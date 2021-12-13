@@ -6,7 +6,7 @@
     transform: rotateY(0deg);
     transition: 0.5s;
     transform-style: preserve-3d;
-    box-shadow: 0.2rem 0.2rem 0.5rem #505050;
+    box-shadow: 0.1rem 0.1rem 0.2rem #505050;
     cursor: pointer;
 }
 

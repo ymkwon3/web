@@ -34,6 +34,7 @@ a:hover {
 
 .App-header {
   height: 100vh;
+  background-color: #121212;
 }
 .App-header > div {
   font-size: 1.6rem;
@@ -44,7 +45,7 @@ a:hover {
 }
 
 .App-aboutMe {
-  background-color: white;
+  background: white;
   height: 40vh;
 }
 
@@ -157,8 +158,6 @@ a:hover {
 .menu-button {
   position: fixed;
   display: inline-block!important;
-  width: 2.5rem;
-  height: 2.5rem;
   content: none;
   top: 1rem;
   left: 1rem;
@@ -171,7 +170,7 @@ a:hover {
 .menu-bar1, .menu-bar2, .menu-bar3 {
   width: 1.5rem;
   height: 0.5rem;
-  background-color: red;
+  background-color: black;
   margin: 0.5rem 0;
   transition: 0.5s;
 }
@@ -201,12 +200,17 @@ a:hover {
   width: 0;
   position: fixed;
   z-index: 2;
-  top: 0;
-  left: 0;
-  background-color: #111;
+  background-color: #333333;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
+} 
+
+.menu > div {
+  font-size: 1.8rem;
+  margin: 1rem 0;
+  cursor: pointer;
+  user-select: none;
 }
 
 @keyframes slideInLeft {
