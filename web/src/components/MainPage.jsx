@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import axios from 'axios';
+
 import '../css/App.css';
 
 import Project from './Project';
@@ -7,7 +8,6 @@ import Project from './Project';
 // intor page
 
 function App() {
-  const textRef = useRef();
   const [header, setHeader] = useState();
   const [cursor, setCursor] = useState();
 
@@ -15,7 +15,7 @@ function App() {
   let slideIdx = 0;
 
   useEffect(() => {
-    const url = "http://localhost:3001/board";
+    const url = "http://175.215.49.230:3001/board";
       axios.get(url).then(function(res){
           console.log(res);
       })
@@ -75,7 +75,7 @@ function App() {
   return (
     <>
         <div className="App-header">
-            <div ref={textRef}>
+            <div>
                 {header}{cursor}
             </div>
         </div>

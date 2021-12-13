@@ -154,6 +154,61 @@ a:hover {
   opacity: 0;
 }
 
+.menu-button {
+  position: fixed;
+  display: inline-block!important;
+  width: 2.5rem;
+  height: 2.5rem;
+  content: none;
+  top: 1rem;
+  left: 1rem;
+  cursor: pointer;
+  z-index: 3;
+}.menu-button:hover > div{
+  width: 2.5rem!important;
+}
+
+.menu-bar1, .menu-bar2, .menu-bar3 {
+  width: 1.5rem;
+  height: 0.5rem;
+  background-color: red;
+  margin: 0.5rem 0;
+  transition: 0.5s;
+}
+
+.menu-bar2 {
+  width: 1.0rem!important;
+}
+
+.menu-bar3 {
+  width: 2.0rem!important;
+}
+
+.menu-bar1.menu-change {
+  width: 2.5rem!important;
+  transform: translateY(1.0rem) rotate(-45deg) ;
+}
+.menu-bar2.menu-change {
+  opacity: 0;
+}
+.menu-bar3.menu-change {
+  width: 2.5rem!important;
+  transform: translateY(-1.0rem) rotate(45deg) ;
+}
+
+.menu {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
 @keyframes slideInLeft {
   0% {
     opacity: 0;
