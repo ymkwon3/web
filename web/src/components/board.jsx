@@ -1,23 +1,22 @@
 import { useRef, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
 import axios from 'axios';
 
 function App(props) {
-    const location = useLocation();
+    let boardData;
 
     useEffect(() => {
-        const url = "http://localhost:3001/board";
+        const url = "http://175.215.49.230:3001/board";
         axios.get(url).then(function(res){
-            console.log(res);
+            boardData = res;
+            console.log(boardData);
         })
         .catch(function(err){
             console.log("err: " + err);
         });
     }, []);
-    console.log(location);
     return (
         <div>
-            hellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohello
+            {boardData}
         </div>
     );
 }

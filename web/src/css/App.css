@@ -13,16 +13,6 @@ body {
   transition: 0.2s all;
 }
 
-a {
-  color: blueviolet;
-  text-decoration: none;
-  transition: 0.2s;
-}
-
-a:hover {
-  transform: scale(1.02);
-}
-
 .App {
   color: rgb(204, 204, 204);
 }
@@ -138,6 +128,16 @@ a:hover {
   cursor:default;
 }
 
+.icon-name-section > a {
+  color: blueviolet;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.icon-name-section > a:hover {
+  transform: scale(1.02);
+}
+
 .icon-name-section > div {
   margin: 0 0.5rem;
   transition-duration: 0.5s;
@@ -153,6 +153,30 @@ a:hover {
 
 .waypoint {
   opacity: 0;
+}
+
+.navi {
+  height: 0;
+  overflow: hidden;
+  width: 100vw;
+  background-color: #fffaf2;;
+  position: fixed;
+  transition: 0.2s;
+  z-index: 3;
+  box-shadow: 0.1rem 0.1rem 0.5rem #666666;
+}
+
+.navi > * {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  color : black;
+  margin: 0 5rem;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
 }
 
 .menu-button {

@@ -10,30 +10,25 @@ import Board from './components/Board';
 // intro page
 
 function App() {
+  const naviRef = useRef();
+  onscroll = (e) => {
+    if(window.scrollY > 100){
+      console.log(window.scrollY + " " + window.innerHeight);
+      naviRef.current.style.height = "5vh";
+    } else {
+      naviRef.current.style.height = "0";
+    }
+  }
 
-  const [isMenuActive, setActive] = useState("true");
-  const menuRef = useRef();
-  const handleToggle = () => {
-    setActive(!isMenuActive);
-    menuRef.current.style.width = isMenuActive ? "15vw" : "0";
-    console.log(menuRef.current.style)
-  };
   return (
     <>
       <div className="App">
-        <div className="menu-button" onClick={handleToggle}>
-          <div className={`menu-bar1 ${isMenuActive ? "" : "menu-change"}`}></div>
-          <div className={`menu-bar2 ${isMenuActive ? "" : "menu-change"}`}></div>
-          <div className={`menu-bar3 ${isMenuActive ? "" : "menu-change"}`}></div>
-        </div>
-        <div className="menu flex-column" ref={menuRef}>
-          <div>방명록</div>
-          <div>이메일</div>
-        </div>
         <HashRouter>
-          <Link to="/board">링ㅋ므</Link>
+          <div className="navi flex-row" ref={naviRef}>
+            <Link to="/">Home</Link>
+            <Link to="/board">Board</Link>
+          </div>
           <Routes>
-            
             <Route path="/" element={<MainPage/>}/>
             <Route path="/board" element={<Board/>}/>
           </Routes>

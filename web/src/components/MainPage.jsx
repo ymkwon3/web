@@ -64,13 +64,13 @@ function App() {
     }, 150);
   }, []);
 
-  onscroll = (e) => {
-    if (window.scrollY > window.innerHeight / 2 && slideRef.current[slideIdx].className.length < 32) {
-      slideRef.current[slideIdx++].className += " animated slide-in-left waypoint";
-      slideRef.current[slideIdx++].className += " animated slide-in-left waypoint";
-      slideRef.current[slideIdx].className += " animated slide-in-right waypoint";
-    }
-  }
+  // onscroll = (e) => {
+  //   if (window.scrollY > window.innerHeight / 2 && slideRef.current[slideIdx].className.length < 32) {
+  //     slideRef.current[slideIdx++].className += " animated slide-in-left waypoint";
+  //     slideRef.current[slideIdx++].className += " animated slide-in-left waypoint";
+  //     slideRef.current[slideIdx].className += " animated slide-in-right waypoint";
+  //   }
+  // }
 
   return (
     <>
