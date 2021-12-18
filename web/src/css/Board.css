@@ -1,0 +1,38 @@
+.board {
+    background-color: #fffaf2;
+}
+
+.board > ul {
+    list-style-type: none;
+}
+
+.post {
+    width: 40rem;
+    margin: 2rem 0;
+    padding: 1rem 0;
+    color: black;
+    box-shadow: 0.2rem 0.2rem 0.5rem #666666;
+}
+
+.post-title {
+    font-size: 1.6rem;
+    width: 28rem;
+    margin: 0.2rem 0;
+    font-weight: bold;
+}
+
+.post-writer {
+    width: 28rem;
+    margin: 0.2rem 0;
+    font-size: 0.8rem;
+}
+
+.post-content {
+    width: 30rem;
+    font-size: 1.0rem;
+}
+
+.post-hide {
+    height: 0;
+    overflow-y: hidden;
+}
