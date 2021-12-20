@@ -10,16 +10,15 @@ function App(props) {
     const url = "http://175.215.49.230:3001/";
     const apiGet = "board";
     const apiDelete = "delete";
-    
+    async function getData() {
+        await axios.get(url + apiGet).then(function(res){
+            setViewContent(res.data);
+        })
+        .catch(function(err){
+            console.log("err: " + err);
+        });
+    }
     useEffect(() => {
-        async function getData() {
-            await axios.get(url + apiGet).then(function(res){
-                setViewContent(res.data);
-            })
-            .catch(function(err){
-                console.log("err: " + err);
-            });
-        }
         getData();
     }, []);
 
@@ -41,6 +40,7 @@ function App(props) {
             });
         }
         deletePost();
+        getData();
     }
 
     console.log(viewContent);
