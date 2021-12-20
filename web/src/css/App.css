@@ -237,6 +237,16 @@ body {
   user-select: none;
 }
 
+.scroll-y {
+  height: 60rem;
+  overflow-y: scroll;
+  padding: 0;
+}
+
+.scroll-y::-webkit-scrollbar {
+  display: none;
+}
+
 @keyframes slideInLeft {
   0% {
     opacity: 0;

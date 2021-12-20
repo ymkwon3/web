@@ -8,10 +8,15 @@
 
 .post {
     width: 40rem;
-    margin: 2rem 0;
+    margin: 2rem 1rem;
     padding: 1rem 0;
     color: black;
     box-shadow: 0.2rem 0.2rem 0.5rem #666666;
+    transition: 0.2s;
+}
+
+.post:hover {
+    transform: scale(1.02);
 }
 
 .post-title {

@@ -13,7 +13,6 @@ function App() {
   const naviRef = useRef();
   onscroll = (e) => {
     if(window.scrollY > 100){
-      console.log(window.scrollY + " " + window.innerHeight);
       naviRef.current.style.height = "5vh";
     } else {
       naviRef.current.style.height = "0";
