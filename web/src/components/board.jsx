@@ -6,21 +6,24 @@ import '../css/Board.css';
 
 function App(props) {
     const [viewContent, setViewContent] = useState([]);
+    const [viewContentChange, setViewContentChange] = useState(0);
     const postRef = useRef([]);
-    const url = "http://175.215.49.230:3001/";
+    const url = "https://175.215.49.230:3001/";
     const apiGet = "board";
-    const apiDelete = "delete";
-    async function getData() {
-        await axios.get(url + apiGet).then(function(res){
-            setViewContent(res.data);
-        })
-        .catch(function(err){
-            console.log("err: " + err);
-        });
-    }
+    const apiDelete = "postDelete";
+    const apiInsert = "postInsert";
     useEffect(() => {
+        async function getData() {
+            await axios.get(url + apiGet).then(function(res){
+                setViewContent(res.data);
+                setViewContentChange(1);
+            })
+            .catch(function(err){
+                console.log("err: " + err);
+            });
+        }
         getData();
-    }, []);
+    }, [viewContentChange]);
 
     // 게시물 클릭 시, 숨겨진 내용을 보여줍니다.
     const onClickHandler = (e) => {
@@ -34,16 +37,15 @@ function App(props) {
         async function deletePost() {
             await axios.delete(url + apiDelete + "/" + e).then(function(res){
                 console.log("게시물이 삭제되었습니다. id : " + e);
+                setViewContentChange(-1);
             })
             .catch(function(err){
                 console.log("err: " + err);
             });
         }
         deletePost();
-        getData();
     }
 
-    console.log(viewContent);
     const boardList = viewContent.map((data) => 
         <li 
         className='post flex-column' 

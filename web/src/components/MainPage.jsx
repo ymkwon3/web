@@ -15,14 +15,6 @@ function App() {
   let slideIdx = 0;
 
   useEffect(() => {
-    const url = "http://175.215.49.230:3001/board";
-      axios.get(url).then(function(res){
-          console.log(res);
-      })
-      .catch(function(err){
-          console.log("err: " + err);
-      });
-
     const content = ["권영민의 포트폴리오입니다.", "방문해주셔서 감사합니다.", "꾸준한 업데이트 예정입니다."];
     let text = "";
     let cursor = "_";
