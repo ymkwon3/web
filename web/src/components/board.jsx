@@ -12,15 +12,16 @@ function App(props) {
     const apiGet = "board";
     const apiDelete = "postDelete";
     const apiInsert = "postInsert";
+    //todo: api 파일 따로 정리하기
     useEffect(() => {
         async function getData() {
-            await axios.get(url + apiGet).then(function(res){
+            await axios.get(url + apiGet).then(function (res) {
                 setViewContent(res.data);
                 setViewContentChange(1);
             })
-            .catch(function(err){
-                console.log("err: " + err);
-            });
+                .catch(function (err) {
+                    console.log("err: " + err);
+                });
         }
         getData();
     }, [viewContentChange]);
@@ -35,23 +36,23 @@ function App(props) {
     // 게시물을 삭제합니다.
     const onClickDelete = (e) => {
         async function deletePost() {
-            await axios.delete(url + apiDelete + "/" + e).then(function(res){
+            await axios.delete(url + apiDelete + "/" + e).then(function (res) {
                 console.log("게시물이 삭제되었습니다. id : " + e);
                 setViewContentChange(-1);
             })
-            .catch(function(err){
-                console.log("err: " + err);
-            });
+                .catch(function (err) {
+                    console.log("err: " + err);
+                });
         }
         deletePost();
     }
 
-    const boardList = viewContent.map((data) => 
-        <li 
-        className='post flex-column' 
-        key={data.id} 
-        ref={e => postRef.current[data.id] = e}
-        onClick={() => onClickHandler(data.id)}
+    const boardList = viewContent.map((data) =>
+        <li
+            className='post flex-column'
+            key={data.id}
+            ref={e => postRef.current[data.id] = e}
+            onClick={() => onClickHandler(data.id)}
         >
             <div className="flex-row">
                 <div className='flex-column'>
