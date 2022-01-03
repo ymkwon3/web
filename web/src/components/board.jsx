@@ -12,8 +12,9 @@ function App(props) {
     const apiGet = "board";
     const apiDelete = "postDelete";
     const apiInsert = "postInsert";
+
     //todo: api 파일 따로 정리하기
-    
+
     useEffect(() => {
         async function getData() {
             await axios.get(url + apiGet).then(function (res) {
