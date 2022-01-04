@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import axios from 'axios';
+
 import '../css/App.css';
 
 import Project from './Project';
@@ -7,7 +8,6 @@ import Project from './Project';
 // intor page
 
 function App() {
-  const textRef = useRef();
   const [header, setHeader] = useState();
   const [cursor, setCursor] = useState();
 
@@ -15,14 +15,6 @@ function App() {
   let slideIdx = 0;
 
   useEffect(() => {
-    const url = "http://localhost:3001/board";
-      axios.get(url).then(function(res){
-          console.log(res);
-      })
-      .catch(function(err){
-          console.log("err: " + err);
-      });
-
     const content = ["권영민의 포트폴리오입니다.", "방문해주셔서 감사합니다.", "꾸준한 업데이트 예정입니다."];
     let text = "";
     let cursor = "_";
@@ -64,18 +56,18 @@ function App() {
     }, 150);
   }, []);
 
-  onscroll = (e) => {
-    if (window.scrollY > window.innerHeight / 2 && slideRef.current[slideIdx].className.length < 32) {
-      slideRef.current[slideIdx++].className += " animated slide-in-left waypoint";
-      slideRef.current[slideIdx++].className += " animated slide-in-left waypoint";
-      slideRef.current[slideIdx].className += " animated slide-in-right waypoint";
-    }
-  }
+  // onscroll = (e) => {
+  //   if (window.scrollY > window.innerHeight / 2 && slideRef.current[slideIdx].className.length < 32) {
+  //     slideRef.current[slideIdx++].className += " animated slide-in-left waypoint";
+  //     slideRef.current[slideIdx++].className += " animated slide-in-left waypoint";
+  //     slideRef.current[slideIdx].className += " animated slide-in-right waypoint";
+  //   }
+  // }
 
   return (
     <>
         <div className="App-header">
-            <div ref={textRef}>
+            <div>
                 {header}{cursor}
             </div>
         </div>
