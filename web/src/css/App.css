@@ -238,13 +238,20 @@ body {
 }
 
 .scroll-y {
-  height: 60rem;
+  height: 80vh;
+  width: 50vw;
   overflow-y: scroll;
-  padding: 0;
+  overflow-x: hidden;
+  padding: 1rem 0;
 }
 
 .scroll-y::-webkit-scrollbar {
-  display: none;
+  width: 0.8rem;
+}.scroll-y::-webkit-scrollbar-thumb {
+  background: #aaaaaa; 
+  border-radius: 10px;
+}.scroll-y::-webkit-scrollbar-thumb:hover {
+  background: #666666; 
 }
 
 @keyframes slideInLeft {

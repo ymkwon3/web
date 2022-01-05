@@ -13,7 +13,7 @@ function App(props) {
     const apiDelete = "postDelete";
     const apiInsert = "postInsert";
 
-    //todo: api 파일 따로 정리하기
+    //todo: api 파일 따로 정리하기, 삭제시 비밀번호 입력
 
     useEffect(() => {
         async function getData() {
@@ -59,11 +59,14 @@ function App(props) {
             <div className="flex-row">
                 <div className='flex-column'>
                     <div className='post-title'>{data.title}</div>
-                    <div className='post-writer'>작성자: {data.writer}</div>
+                    <div className='post-writer'>작성자 : {data.writer}</div>
                 </div>
             </div>
             <div className="post-content post-hide">
-                내용입니다. {data.id}
+                <div className="post-date">
+                    작성일 : {data.date}
+                </div>
+                {data.content}
                 <div className='flex-row'>
                     <button>수정</button>
                     <button onClick={() => onClickDelete(data.id)}>삭제</button>
