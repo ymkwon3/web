@@ -56,13 +56,15 @@ function App() {
     }, 150);
   }, []);
 
-  // onscroll = (e) => {
-  //   if (window.scrollY > window.innerHeight / 2 && slideRef.current[slideIdx].className.length < 32) {
-  //     slideRef.current[slideIdx++].className += " animated slide-in-left waypoint";
-  //     slideRef.current[slideIdx++].className += " animated slide-in-left waypoint";
-  //     slideRef.current[slideIdx].className += " animated slide-in-right waypoint";
-  //   }
-  // }
+
+  // todo: onscroll은 하나밖에 적용이 안되나보다... 나중에 위에 네비게이션분 따로 손봐야할듯
+  onscroll = (e) => {
+    if (window.scrollY > window.innerHeight / 2 && slideRef.current[slideIdx].className.length < 32) {
+      slideRef.current[slideIdx++].className += " animated slide-in-left waypoint";
+      slideRef.current[slideIdx++].className += " animated slide-in-left waypoint";
+      slideRef.current[slideIdx].className += " animated slide-in-right waypoint";
+    }
+  }
 
   return (
     <>
