@@ -7,12 +7,16 @@ import Project from './Project';
 
 // intor page
 
-function App() {
+function App(props) {
   const [header, setHeader] = useState();
   const [cursor, setCursor] = useState();
 
   const slideRef = useRef([]);
   let slideIdx = 0;
+
+  // todo: onscroll은 하나밖에 적용이 안되나보다... 나중에 위에 네비게이션분 따로 손봐야할듯
+  // 구분을 어떻게 지어야할까?
+  console.log("this props: " + props.path)
 
   useEffect(() => {
     const content = ["권영민의 포트폴리오입니다.", "방문해주셔서 감사합니다.", "꾸준한 업데이트 예정입니다."];
@@ -21,43 +25,41 @@ function App() {
     let idx = 0;
     let lineIdx = 0;
     let textState = true;
-    let cursorInterval = setInterval(() => {
-      if (cursor === "_") {
-        setCursor(cursor);
-        cursor = '';
-      } else {
-        setCursor(cursor);
-        cursor = '_'
-      }
-    }, 500);
-    let interval = setInterval(() => {
-      if (textState) {
-        text += content[lineIdx][idx];
-        setHeader(text);
-        idx++;
-      } else {
-        text = text.slice(0, -1);
-        setHeader(text);
-        if (text.length === 0) {
-          textState = true;
-        }
-      }
+    // let cursorInterval = setInterval(() => {
+    //   if (cursor === "_") {
+    //     setCursor(cursor);
+    //     cursor = '';
+    //   } else {
+    //     setCursor(cursor);
+    //     cursor = '_'
+    //   }
+    // }, 500);
+    // let interval = setInterval(() => {
+    //   if (textState) {
+    //     text += content[lineIdx][idx];
+    //     setHeader(text);
+    //     idx++;
+    //   } else {
+    //     text = text.slice(0, -1);
+    //     setHeader(text);
+    //     if (text.length === 0) {
+    //       textState = true;
+    //     }
+    //   }
 
-      if (lineIdx === content.length) {
-        textState = false;
-        lineIdx = 0;
-        idx = 0;
-      }
-      else if (idx === content[lineIdx].length) {
-        textState = false;
-        lineIdx++;
-        idx = 0;
-      }
-    }, 150);
+    //   if (lineIdx === content.length) {
+    //     textState = false;
+    //     lineIdx = 0;
+    //     idx = 0;
+    //   }
+    //   else if (idx === content[lineIdx].length) {
+    //     textState = false;
+    //     lineIdx++;
+    //     idx = 0;
+    //   }
+    // }, 150);
   }, []);
 
-
-  // todo: onscroll은 하나밖에 적용이 안되나보다... 나중에 위에 네비게이션분 따로 손봐야할듯
   onscroll = (e) => {
     if (window.scrollY > window.innerHeight / 2 && slideRef.current[slideIdx].className.length < 32) {
       slideRef.current[slideIdx++].className += " animated slide-in-left waypoint";

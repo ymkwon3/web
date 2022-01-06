@@ -28,7 +28,7 @@ function App() {
             <Link to="/board">Board</Link>
           </div>
           <Routes>
-            <Route path="/" element={<MainPage/>}/>
+            <Route path="/" element={<MainPage path="MainPage"/>}/>
             <Route path="/board" element={<Board/>}/>
           </Routes>
         </HashRouter>
