@@ -11,13 +11,6 @@ import Board from './components/Board';
 
 function App() {
   const naviRef = useRef();
-  onscroll = (e) => {
-    if(window.scrollY > 100){
-      naviRef.current.style.height = "5vh";
-    } else {
-      naviRef.current.style.height = "0";
-    }
-  }
 
   return (
     <>

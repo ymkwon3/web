@@ -21,9 +21,9 @@ function App(props) {
                 setViewContent(res.data);
                 setViewContentChange(1);
             })
-                .catch(function (err) {
-                    console.log("err: " + err);
-                });
+            .catch(function (err) {
+                console.log("err: " + err);
+            });
         }
         getData();
     }, [viewContentChange]);
@@ -39,23 +39,30 @@ function App(props) {
     const onClickDelete = (e) => {
         async function deletePost() {
             await axios.delete(url + apiDelete + "/" + e).then(function (res) {
-                console.log("게시물이 삭제되었습니다. id : " + e);
-                setViewContentChange(-1);
-            })
+                    console.log("게시물이 삭제되었습니다. id : " + e);
+                    setViewContentChange(-1);
+                })
                 .catch(function (err) {
                     console.log("err: " + err);
                 });
-        }
+            }
         deletePost();
     }
+    let boardList;
 
-    const boardList = viewContent.map((data) =>
-        <li
-            className='post flex-column'
-            key={data.id}
-            ref={e => postRef.current[data.id] = e}
-            onClick={() => onClickHandler(data.id)}
-        >
+    // 서버가 열리지 않을 경우
+    if(viewContent.length === 0) {
+        boardList = <div className='black-14pt'>Please check the server status...</div>;
+    }
+    // 정상 작동
+    else {
+        boardList = viewContent.map((data) =>
+            <li
+                className='post flex-column'
+                key={data.id}
+                ref={e => postRef.current[data.id] = e}
+                onClick={() => onClickHandler(data.id)}
+            >
             <div className="flex-row">
                 <div className='flex-column'>
                     <div className='post-title'>{data.title}</div>
@@ -73,10 +80,12 @@ function App(props) {
                 </div>
             </div>
         </li>
-    );
+        );
+    }
+
     return (
         <div className='board flex-column'>
-            <ul className='scroll-y'>
+            <ul className='scroll-y flex-column'>
                 {boardList}
             </ul>
         </div>
@@ -84,3 +93,5 @@ function App(props) {
 }
 
 export default App;
+
+// 게시물 참고 : https://falaner.tistory.com/59
