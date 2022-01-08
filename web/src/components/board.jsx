@@ -84,7 +84,7 @@ function App(props) {
     }
 
     return (
-        <div className='board flex-column'>
+        <div className='box-shadow-inset board flex-column'>
             <ul className='scroll-y flex-column'>
                 {boardList}
             </ul>

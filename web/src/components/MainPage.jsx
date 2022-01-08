@@ -72,7 +72,7 @@ function App(props) {
                 {header}{cursor}
             </div>
         </div>
-        <div className="App-aboutMe flex-row">
+        <div className="box-shadow-inset App-aboutMe flex-row">
             <div className="subTitle" ref={(e) => slideRef.current[0] = e} style={{ opacity: 0 }}>
                 소개
             </div>
@@ -90,7 +90,7 @@ function App(props) {
                 알고리즘 문제 해결, 개발을 통해 꾸준히 달성하고 있습니다.
             </div>
         </div>
-        <div className="App-project flex-column">
+        <div className="box-shadow-inset App-project flex-column">
             <Project />
         </div>
     </>

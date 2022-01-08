@@ -13,6 +13,10 @@ body {
   transition: 0.2s all;
 }
 
+.box-shadow-inset {
+  box-shadow: inset 0.1rem 0.1rem 0.5rem #333333;
+}
+
 .App {
   color: rgb(204, 204, 204);
 }
@@ -156,7 +160,7 @@ body {
 }
 
 .navi {
-  height: 5vh;
+  height: 7.5vh;
   overflow: hidden;
   width: 100vw;
   background-color: #1e1e1e;;
@@ -184,64 +188,6 @@ body {
   top: 0;
 }
 
-.menu-button {
-  position: fixed;
-  display: inline-block!important;
-  content: none;
-  top: 1rem;
-  left: 1rem;
-  cursor: pointer;
-  z-index: 3;
-}.menu-button:hover > div{
-  width: 2.5rem!important;
-}
-
-.menu-bar1, .menu-bar2, .menu-bar3 {
-  width: 1.5rem;
-  height: 0.5rem;
-  background-color: black;
-  margin: 0.5rem 0;
-  transition: 0.5s;
-}
-
-.menu-bar2 {
-  width: 1.0rem!important;
-}
-
-.menu-bar3 {
-  width: 2.0rem!important;
-}
-
-.menu-bar1.menu-change {
-  width: 2.5rem!important;
-  transform: translateY(1.0rem) rotate(-45deg) ;
-}
-.menu-bar2.menu-change {
-  opacity: 0;
-}
-.menu-bar3.menu-change {
-  width: 2.5rem!important;
-  transform: translateY(-1.0rem) rotate(45deg) ;
-}
-
-.menu {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 2;
-  background-color: #333333;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-} 
-
-.menu > div {
-  font-size: 1.8rem;
-  margin: 1rem 0;
-  cursor: pointer;
-  user-select: none;
-}
-
 .scroll-y {
   height: 80vh;
   width: 50vw;
@@ -263,6 +209,40 @@ body {
   color: black;
   font-weight: bold;
   font-size: 1.4rem;
+}
+
+.menu-bar1, .menu-bar2, .menu-bar3 {
+  z-index: 10;
+  width: 2.5rem;
+  height: 0.5rem;
+  margin-bottom: 0.5rem;
+  background-color: rgb(204, 204, 204);
+  mix-blend-mode: difference;
+  transition: 0.2s;
+}
+
+.menu-bar-container {
+  display: inline-block!important;
+  width: 2.5rem;
+  height: 2.5rem;
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  z-index: 11;
+  cursor: pointer;
+  border: 1px solid red;
+}
+
+.menu-change.menu-bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.menu-change.menu-bar2 {opacity: 0;}
+
+.menu-change.menu-bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
 }
 
 @keyframes slideInLeft {

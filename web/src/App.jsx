@@ -9,12 +9,23 @@ import MainPage from './components/MainPage';
 import Board from './components/Board';
 // intro page
 
+// todo : dark mode, light mode
+
 function App() {
   const naviRef = useRef();
-
+  const [menuActive, setMenuActive] = useState(false);
+  const menuClick = () => {
+    setMenuActive(!menuActive);
+  };
   return (
     <>
       <div className="App">
+        <div className='menu-bar-container' onClick={menuClick}>
+          <div className={menuActive ? "menu-change menu-bar1" : "menu-bar1"}></div>
+          <div className={menuActive ? "menu-change menu-bar2" : "menu-bar2"}></div>
+          <div className={menuActive ? "menu-change menu-bar3" : "menu-bar3"}></div>
+        </div>
+        
         <HashRouter>
           <div className="navi flex-row" ref={naviRef}>
             <Link to="/">Home</Link>
