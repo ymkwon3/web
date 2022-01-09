@@ -16,6 +16,7 @@ function App() {
   const [menuActive, setMenuActive] = useState(false);
   const menuClick = () => {
     setMenuActive(!menuActive);
+    naviRef.current.style.height = menuActive ? "7.5vh" : "0";
   };
   return (
     <>

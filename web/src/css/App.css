@@ -217,8 +217,7 @@ body {
   height: 0.5rem;
   margin-bottom: 0.5rem;
   background-color: rgb(204, 204, 204);
-  mix-blend-mode: difference;
-  transition: 0.2s;
+  transition: 0.25s;
 }
 
 .menu-bar-container {
@@ -230,19 +229,18 @@ body {
   top: 1rem;
   z-index: 11;
   cursor: pointer;
-  border: 1px solid red;
 }
 
 .menu-change.menu-bar1 {
-  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-  transform: rotate(-45deg) translate(-9px, 6px);
+  -webkit-transform: translate(0, 1.0rem) rotate(45deg);
+  transform: translate(0, 1.0rem) rotate(45deg);
 }
 
 .menu-change.menu-bar2 {opacity: 0;}
 
 .menu-change.menu-bar3 {
-  -webkit-transform: rotate(45deg) translate(-8px, -8px);
-  transform: rotate(45deg) translate(-8px, -8px);
+  -webkit-transform: translate(0, -1.0rem) rotate(-45deg);
+  transform: translate(0, -1.0rem) rotate(-45deg);
 }
 
 @keyframes slideInLeft {
