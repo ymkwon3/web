@@ -33,7 +33,7 @@ function App() {
             <Link to="/board">Board</Link>
           </div>
           <Routes>
-            <Route path="/" element={<MainPage path="MainPage"/>}/>
+            <Route path="/" exact={true} element={<MainPage path="MainPage"/>}/>
             <Route path="/board" element={<Board/>}/>
           </Routes>
         </HashRouter>

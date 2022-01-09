@@ -39,6 +39,8 @@ function App(props) {
     const onClickDelete = (e) => {
         async function deletePost() {
             await axios.delete(url + apiDelete + "/" + e).then(function (res) {
+                    // todo: 게시물 비밀번호 확인
+                    alert("게시물이 삭제되었습니다.");
                     console.log("게시물이 삭제되었습니다. id : " + e);
                     setViewContentChange(-1);
                 })
@@ -49,13 +51,12 @@ function App(props) {
         deletePost();
     }
     let boardList;
-
     // 서버가 열리지 않을 경우
     if(viewContent.length === 0) {
         boardList = <div className='black-14pt'>Please check the server status...</div>;
     }
     // 정상 작동
-    else {
+    else{
         boardList = viewContent.map((data) =>
             <li
                 className='post flex-column'
@@ -79,13 +80,15 @@ function App(props) {
                     <button onClick={() => onClickDelete(data.id)}>삭제</button>
                 </div>
             </div>
-        </li>
+            </li>
         );
     }
+    
+    
 
     return (
         <div className='box-shadow-inset board flex-column'>
-            <ul className='scroll-y flex-column'>
+            <ul className='scroll-y'>
                 {boardList}
             </ul>
         </div>

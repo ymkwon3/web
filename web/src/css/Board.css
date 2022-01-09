@@ -1,5 +1,6 @@
 .board {
     background-color: #fffaf2;
+    padding: 2rem 0;
 }
 
 .board > ul {
@@ -8,7 +9,7 @@
 
 .post {
     width: 40rem;
-    margin: 1.4rem auto;
+    margin: 2.5rem auto;
     padding: 1rem 0;
     color: black;
     box-shadow: 0.2rem 0.2rem 0.5rem #666666;
