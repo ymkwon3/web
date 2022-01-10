@@ -34,7 +34,7 @@ body {
   font-size: 1.6rem;
   font-weight: bold;
   white-space: pre-line;
-  width: 22rem;
+  width: 24rem;
   user-select: none;
 }
 
@@ -163,22 +163,23 @@ body {
 }
 
 .navi {
+  justify-content: space-around!important;
   height: 7.5vh;
   overflow: hidden;
-  width: 100vw;
+  width: 80vw;
   background-color: #1e1e1e;;
   position: fixed;
   transition: 0.2s;
-  z-index: 3;
+  z-index: 5;
   box-shadow: 0.1rem 0.1rem 0.5rem #111111;
+  padding: 0 10vw;
 }
 
-.navi > a {
+.navi> div > a {
   font-size: 1.2rem;
   font-weight: bold;
   text-decoration: none;
   color: inherit;
-  margin: 0 5rem;
   transition: 0.2s;
 }
 
@@ -274,16 +275,16 @@ body {
 
   .App-header > div {
     font-size: 1.4rem;
-    width: 70vw;
-  }
-
-  .App-aboutMe > :nth-child(3) {
-    margin-right: 1.4rem;
+    width: 75vw;
   }
 
   .content {
     font-size: 0.8rem;
     white-space: pre-line;
+  }
+
+  .column-line {
+    margin: 0 2rem;
   }
 
   .icon-name-section {
@@ -321,5 +322,28 @@ body {
 
   .App-project {
     padding: 2rem 0;
+  }
+
+  .menu-bar1, .menu-bar2, .menu-bar3 {
+    width: 2.0rem;
+    height: 0.4rem;
+    margin-bottom: 0.4rem;
+  }
+  
+  .menu-bar-container {
+    width: 2.0rem;
+    height: 2.0rem;
+    left: 1.0rem;
+    top: 1.0rem;
+  }
+  
+  .menu-change.menu-bar1 {
+    -webkit-transform: translate(0, 0.8rem) rotate(45deg);
+    transform: translate(0, 0.8rem) rotate(45deg);
+  }
+  
+  .menu-change.menu-bar3 {
+    -webkit-transform: translate(0, -0.8rem) rotate(-45deg);
+    transform: translate(0, -0.8rem) rotate(-45deg);
   }
 }

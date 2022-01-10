@@ -29,8 +29,13 @@ function App() {
         
         <HashRouter>
           <div className="navi flex-row" ref={naviRef}>
-            <Link to="/">Home</Link>
-            <Link to="/board">Board</Link>
+            <div>
+              <Link to="/">Home</Link>
+            </div>
+            <div>
+              <Link to="/board">Board</Link>
+            </div>
+            
           </div>
           <Routes>
             <Route path="/" exact={true} element={<MainPage path="MainPage"/>}/>
