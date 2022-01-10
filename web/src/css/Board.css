@@ -48,3 +48,25 @@
     height: 0;
     overflow-y: hidden;
 }
+
+.insert-btn {
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    right: 2rem;
+    bottom: 7rem;
+    background-color: red;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.insert-btn:active {
+    background-color: #666666;
+}
+
+@media screen and (orientation:portrait) {
+    .insert-btn {
+        right: 1rem;
+        bottom: 1rem;
+    }
+}

@@ -21,9 +21,9 @@ function App(props) {
                 setViewContent(res.data);
                 setViewContentChange(1);
             })
-            .catch(function (err) {
-                console.log("err: " + err);
-            });
+                .catch(function (err) {
+                    console.log("err: " + err);
+                });
         }
         getData();
     }, [viewContentChange]);
@@ -39,24 +39,24 @@ function App(props) {
     const onClickDelete = (e) => {
         async function deletePost() {
             await axios.delete(url + apiDelete + "/" + e).then(function (res) {
-                    // todo: 게시물 비밀번호 확인
-                    alert("게시물이 삭제되었습니다.");
-                    console.log("게시물이 삭제되었습니다. id : " + e);
-                    setViewContentChange(-1);
-                })
+                // todo: 게시물 비밀번호 확인
+                alert("게시물이 삭제되었습니다.");
+                console.log("게시물이 삭제되었습니다. id : " + e);
+                setViewContentChange(-1);
+            })
                 .catch(function (err) {
                     console.log("err: " + err);
                 });
-            }
+        }
         deletePost();
     }
     let boardList;
     // 서버가 열리지 않을 경우
-    if(viewContent.length === 0) {
+    if (viewContent.length === 0) {
         boardList = <div className='black-14pt'>Please check the server status...</div>;
     }
     // 정상 작동
-    else{
+    else {
         boardList = viewContent.map((data) =>
             <li
                 className='post flex-column'
@@ -64,33 +64,32 @@ function App(props) {
                 ref={e => postRef.current[data.id] = e}
                 onClick={() => onClickHandler(data.id)}
             >
-            <div className="flex-row">
-                <div className='flex-column'>
-                    <div className='post-title'>{data.title}</div>
-                    <div className='post-writer'>작성자 : {data.writer}</div>
+                <div className="flex-row">
+                    <div className='flex-column'>
+                        <div className='post-title'>{data.title}</div>
+                        <div className='post-writer'>작성자 : {data.writer}</div>
+                    </div>
                 </div>
-            </div>
-            <div className="post-content post-hide">
-                <div className="post-date">
-                    작성일 : {data.date}
+                <div className="post-content post-hide">
+                    <div className="post-date">
+                        작성일 : {data.date}
+                    </div>
+                    {data.content}
+                    <div className='flex-row'>
+                        <button>수정</button>
+                        <button onClick={() => onClickDelete(data.id)}>삭제</button>
+                    </div>
                 </div>
-                {data.content}
-                <div className='flex-row'>
-                    <button>수정</button>
-                    <button onClick={() => onClickDelete(data.id)}>삭제</button>
-                </div>
-            </div>
             </li>
         );
     }
-    
-    
 
     return (
         <div className='box-shadow-inset board flex-column'>
             <ul className='scroll-y'>
                 {boardList}
             </ul>
+            <div className="insert-btn"></div>
         </div>
     );
 }

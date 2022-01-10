@@ -22,11 +22,11 @@ function App() {
     <>
       <div className="App">
         <div className='menu-bar-container' onClick={menuClick}>
-          <div className={menuActive ? "menu-change menu-bar1" : "menu-bar1"}></div>
-          <div className={menuActive ? "menu-change menu-bar2" : "menu-bar2"}></div>
-          <div className={menuActive ? "menu-change menu-bar3" : "menu-bar3"}></div>
+          <div className={menuActive ? "menu-bar1" : "menu-change menu-bar1"}></div>
+          <div className={menuActive ? "menu-bar2" : "menu-change menu-bar2"}></div>
+          <div className={menuActive ? "menu-bar3" : "menu-change menu-bar3"}></div>
         </div>
-        
+
         <HashRouter>
           <div className="navi flex-row" ref={naviRef}>
             <div>
@@ -35,16 +35,16 @@ function App() {
             <div>
               <Link to="/board">Board</Link>
             </div>
-            
+
           </div>
           <Routes>
-            <Route path="/" exact={true} element={<MainPage path="MainPage"/>}/>
-            <Route path="/board" element={<Board/>}/>
+            <Route path="/" exact={true} element={<MainPage path="MainPage" />} />
+            <Route path="/board" element={<Board />} />
           </Routes>
         </HashRouter>
-          <div className="App-footer">
-            <Footer />
-          </div>
+        <div className="App-footer">
+          <Footer />
+        </div>
       </div>
     </>
   );
