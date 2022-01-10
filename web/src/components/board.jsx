@@ -89,7 +89,7 @@ function App(props) {
             <ul className='scroll-y'>
                 {boardList}
             </ul>
-            <div className="insert-btn"></div>
+            <div className="insert-btn flex-column"></div>
         </div>
     );
 }

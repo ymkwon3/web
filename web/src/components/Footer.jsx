@@ -9,7 +9,7 @@ function App(props) {
         <>
             <div className="footer flex-column">
                 <div className="footer-title">
-                    계속해서 발전된 모습으로 찾아뵙겠습니다.
+                    계속해서 업데이트중입니다!
                 </div>
                 <div className="flex-row">
                     <div className="flex-row icon-name-section">
