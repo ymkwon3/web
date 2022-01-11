@@ -4,6 +4,8 @@ import axios from 'axios';
 import '../css/App.css';
 import '../css/Board.css';
 
+import * as API from './Api.js';
+
 function App(props) {
     const [viewContent, setViewContent] = useState([]);
     const [viewContentChange, setViewContentChange] = useState(0);
@@ -14,18 +16,14 @@ function App(props) {
     const apiInsert = "postInsert";
 
     //todo: api 파일 따로 정리하기, 삭제시 비밀번호 입력
-
     useEffect(() => {
-        async function getData() {
-            await axios.get(url + apiGet).then(function (res) {
-                setViewContent(res.data);
-                setViewContentChange(1);
-            })
-                .catch(function (err) {
-                    console.log("err: " + err);
-                });
+        async function setPost() {
+            let res = await API.getPost();
+            console.log(res);
+            setViewContent(res[0]);
+            setViewContentChange(res[1]);
         }
-        getData();
+        setPost();
     }, [viewContentChange]);
 
     // 게시물 클릭 시, 숨겨진 내용을 보여줍니다.

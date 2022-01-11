@@ -39,7 +39,7 @@ body {
 }
 
 .App-aboutMe {
-  background: #ffffff;
+  background: white;
   height: 40vh;
 }
 
@@ -48,7 +48,7 @@ body {
 }
 
 .App-project {
-  background-color: #ffffff;
+  background-color: #fffaf2;
   color: black;
   padding: 5rem 0;
 }
@@ -70,12 +70,18 @@ body {
   font-weight: bold;
   color: black;
   opacity: 0.8;
-}
-
-.column-line {
   padding-left: 5rem;
   margin-left: 5rem;
   box-shadow: inset 0.05rem 0 0 0 black;
+}
+
+.column-line {
+  content: "";
+  height: 6rem;
+  width: 0.1rem;
+  margin: 0 4rem;
+  background-color: black;
+  opacity: 0;
 }
 
 .row-line {
@@ -177,7 +183,7 @@ body {
   transition: 0.2s;
 }
 
-.navi > div > a:active {
+.navi > a:active {
   color: rgb(150, 150, 150);
 }
 
@@ -214,7 +220,7 @@ body {
   width: 2.5rem;
   height: 0.5rem;
   margin-bottom: 0.5rem;
-  background-color: #888888;
+  background-color: rgb(204, 204, 204);
   transition: 0.25s;
 }
 
@@ -277,11 +283,6 @@ body {
     white-space: pre-line;
   }
 
-  .column-line {
-    padding-left: 2rem;
-    margin-left: 2rem;
-  }
-
   .icon-name-section {
     width: 18rem;
     margin: 1rem 0;
@@ -307,6 +308,12 @@ body {
 
   .subTitle {
     font-size: 1.4rem;
+  }
+
+  .column-line {
+    height: 4rem;
+    width: 1rem;
+    margin: 0 2rem;
   }
 
   .App-project {
