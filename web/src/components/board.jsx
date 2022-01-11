@@ -4,7 +4,7 @@ import axios from 'axios';
 import '../css/App.css';
 import '../css/Board.css';
 
-import * as API from './Api.js';
+import * as API from './Api.jsx';
 
 function App(props) {
     const [viewContent, setViewContent] = useState([]);
@@ -17,13 +17,12 @@ function App(props) {
 
     //todo: api 파일 따로 정리하기, 삭제시 비밀번호 입력
     useEffect(() => {
-        async function setPost() {
+        async function getPost() {
             let res = await API.getPost();
-            console.log(res);
             setViewContent(res[0]);
             setViewContentChange(res[1]);
         }
-        setPost();
+        getPost();
     }, [viewContentChange]);
 
     // 게시물 클릭 시, 숨겨진 내용을 보여줍니다.
@@ -82,12 +81,22 @@ function App(props) {
         );
     }
 
+    const onClickInsert = () => {
+        async function inputPost() {
+            let result = await API.inputPost();
+            if(result){
+                setViewContentChange(-1);
+            }
+        }
+        inputPost();
+    }
+
     return (
         <div className='box-shadow-inset board flex-column'>
             <ul className='scroll-y'>
                 {boardList}
             </ul>
-            <div className="insert-btn flex-column"></div>
+            <div className="insert-btn flex-column" onClick={() => onClickInsert()}></div>
         </div>
     );
 }
