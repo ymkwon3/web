@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 const url = "https://175.215.49.230:3001/";
+// const url = "https://localhost:3001/"
 const post_get = "board";
 const post_delete = "postDelete";
 const post_insert = "postInsert";

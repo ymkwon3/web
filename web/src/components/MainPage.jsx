@@ -82,7 +82,7 @@ function App(props) {
         <div className="subTitle" ref={(e) => slideRef.current[0] = e}>
           소개
         </div>
-        <div className="content column-line flex-column" ref={(e) => slideRef.current[2] = e}>
+        <div className="content flex-column left-line" ref={(e) => slideRef.current[2] = e}>
           좋은 개발자를 꿈꾸며 배우고 있는 권영민입니다.
           <br />
           좋은 기회로 외주를 경험하였고, 이를 통해 개발에 대한 흥미와

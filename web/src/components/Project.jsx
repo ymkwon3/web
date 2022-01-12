@@ -68,9 +68,11 @@ function App(props) {
                         <div className="content">
                             React.js 기반의 포트폴리오 웹사이트 입니다.
                             <br /><br />
-                            <span style={{ textDecoration: "line-through" }}>프론트엔드 개발에 조금 더 집중해 보고 싶어 제작하게 되었습니다.</span>
+                            프론트엔드 개발을 조금 더 경험해 보고 싶어서 제작하게 되었습니다.
                             <br /><br />
-                            하다 보니 욕심이 더 생겨 DB 서버, 미들웨어를 구축해 이것저것 만들어보는 중입니다.
+                            개발을 진행하면서 백엔드도 직접 구현해 보고 싶어서
+                            <br /><br />
+                            MariaDB로 데이터베이스, Node.js로 미들웨어를 구축했습니다.
                             <br /><br />
                             계속된 학습을 통해 추가적인 개발을 할 예정입니다.
                         </div>

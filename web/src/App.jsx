@@ -7,6 +7,7 @@ import './css/App.css';
 import Footer from './components/Footer';
 import MainPage from './components/MainPage';
 import Board from './components/Board';
+import PostWrite from './components/PostWrite'
 // intro page
 
 // todo : dark mode, light mode
@@ -40,6 +41,7 @@ function App() {
           <Routes>
             <Route path="/" exact={true} element={<MainPage path="MainPage" />} />
             <Route path="/board" element={<Board />} />
+            <Route path="/postWrite" element={<PostWrite />} />
           </Routes>
         </HashRouter>
         <div className="App-footer">

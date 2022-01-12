@@ -1,4 +1,5 @@
 import { useRef, useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 import '../css/App.css';
@@ -82,13 +83,13 @@ function App(props) {
     }
 
     const onClickInsert = () => {
-        async function inputPost() {
-            let result = await API.inputPost();
-            if(result){
-                setViewContentChange(-1);
-            }
-        }
-        inputPost();
+        // async function inputPost() {
+        //     let result = await API.inputPost();
+        //     if(result){
+        //         setViewContentChange(-1);
+        //     }
+        // }
+        // inputPost();
     }
 
     return (
@@ -96,7 +97,11 @@ function App(props) {
             <ul className='scroll-y'>
                 {boardList}
             </ul>
-            <div className="insert-btn flex-column" onClick={() => onClickInsert()}></div>
+            
+            <Link to="/postWrite">
+                <img className="insert-btn" src="images/post.svg" alt="postImage"/>
+            </Link>
+            
         </div>
     );
 }

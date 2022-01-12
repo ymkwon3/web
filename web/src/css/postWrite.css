@@ -1,0 +1,10 @@
+.input-page {
+    background-color: #ffffff;
+    height: 100vh;
+}
+
+.input-container {
+    width: 50%;
+    height: 80%;
+    border: 0.1rem solid black;
+}
