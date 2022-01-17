@@ -11,7 +11,8 @@ function App(props) {
     const [viewContent, setViewContent] = useState([]);
     const [viewContentChange, setViewContentChange] = useState(0);
     const postRef = useRef([]);
-    const url = "https://175.215.49.230:3001/";
+    // const url = "https://175.215.49.230:3001/";
+    const url = "https://localhost:3001/";
     const apiGet = "board";
     const apiDelete = "postDelete";
     const apiInsert = "postInsert";
@@ -97,11 +98,11 @@ function App(props) {
             <ul className='scroll-y'>
                 {boardList}
             </ul>
-            
+
             <Link to="/postWrite">
-                <img className="insert-btn" src="images/post.svg" alt="postImage"/>
+                <img className="insert-btn" src="images/post.svg" alt="postImage" />
             </Link>
-            
+
         </div>
     );
 }

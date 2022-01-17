@@ -8,3 +8,32 @@
     height: 80%;
     border: 0.1rem solid black;
 }
+
+.thead {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #111111;
+}
+
+tr {
+    height: 4rem;
+}
+
+td:nth-child(1) {
+    width: 10rem; 
+}
+
+td:nth-child(2) {
+    width: 20rem;
+}
+
+input {
+    border: none;
+    border-bottom: 0.1rem solid #666666;
+    width: 100%;
+    font-size: 1.0rem;
+}
+
+input:focus {
+    outline: 0.1rem solid #000000;
+}
