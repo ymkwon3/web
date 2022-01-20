@@ -45,7 +45,7 @@ function App(props) {
                     </div>
                 </div>
                 <div className="footer-update">
-                    updated on January 10, 2022
+                    updated on January 18, 2022
                 </div>
             </div>
         </>
